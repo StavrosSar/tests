@@ -10,6 +10,7 @@ app = FastAPI()
 app.include_router(items_router)
 app.include_router(system_router)
 
+# Root endpoint
 @app.get("/")
 def root():
     return {"message": "API is running"}
@@ -20,5 +21,5 @@ if __name__ == "__main__":
         "main:app",
         host="127.0.0.1",
         port=8000,
-        reload=True,
+        reload=True, #auto-restart server on code changes (DEV ONLY)
     )
