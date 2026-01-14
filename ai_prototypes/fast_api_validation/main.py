@@ -11,11 +11,12 @@ app.include_router(items_router)
 app.include_router(system_router)
 
 # Root endpoint
+#Altered
 @app.get("/")
 def root(a: int = Query(0), b: int = Query(0)):
     # Adds two numbers provided as query parameters
     return {
-        "message": "API is running for sure",
+        "message": "API is running",
         "a": a,
         "b": b,
         "sum": a + b
