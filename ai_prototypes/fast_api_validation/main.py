@@ -1,8 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from routers.items import router as items_router
 from routers.system import router as system_router
 import logging
-from fastapi import Query
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s %(message)s")
 
