@@ -13,7 +13,7 @@ def test_root():
 def test_create_item_success():
     r = client.post(
         "/items/",
-        #a simple comment
+        #a simple comment!!
         json={"name": "Apple", "price": 2.5}
     )
     assert r.status_code == 200
