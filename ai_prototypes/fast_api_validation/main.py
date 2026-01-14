@@ -13,6 +13,7 @@ app.include_router(system_router)
 # Root endpoint
 @app.get("/")
 def root():
+    #just a comment
     return {"message": "API is running"}
 
 if __name__ == "__main__":
