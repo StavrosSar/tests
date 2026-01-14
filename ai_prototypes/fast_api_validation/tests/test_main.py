@@ -13,8 +13,8 @@ def test_root():
 def test_create_item_success():
     r = client.post(
         "/items/",
-        #a negative price
-        json={"name": "Apple", "price": -2.5}
+        #a positive price
+        json={"name": "Apple", "price": 2.5}
     )
     assert r.status_code == 200
     assert r.json()["item"]["name"] == "Apple"
