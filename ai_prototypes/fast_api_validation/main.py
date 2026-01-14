@@ -13,7 +13,7 @@ app.include_router(system_router)
 # Root endpoint
 @app.get("/")
 def root():
-    return {"message": "API is running"}
+    return {"message": "API is runningaaaaaa"}
 
 if __name__ == "__main__":
     import uvicorn
