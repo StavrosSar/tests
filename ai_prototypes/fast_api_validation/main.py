@@ -11,7 +11,7 @@ app.include_router(items_router)
 app.include_router(system_router)
 
 # Root endpoint
-#Altered
+# Just a comment 
 @app.get("/")
 def root(a: int = Query(0), b: int = Query(0)):
     # Adds two numbers provided as query parameters
