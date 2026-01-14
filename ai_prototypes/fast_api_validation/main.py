@@ -15,7 +15,7 @@ app.include_router(system_router)
 def root(a: int = Query(0), b: int = Query(0)):
     # Adds two numbers provided as query parameters
     return {
-        "message": "API is running",
+        "message": "API is running for sure",
         "a": a,
         "b": b,
         "sum": a + b
