@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from routers.items import router as items_router
 from routers.system import router as system_router
 import logging
+from fastapi import Query
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s %(message)s")
 
@@ -11,11 +12,15 @@ app.include_router(items_router)
 app.include_router(system_router)
 
 # Root endpoint
-# rarararara
 @app.get("/")
-def root():
-    #just a comment
-    return {"message": "API is running"}
+def root(a: int = Query(0), b: int = Query(0)):
+    # Adds two numbers provided as query parameters
+    return {
+        "message": "API is running",
+        "a": a,
+        "b": b,
+        "sum": a + b
+    }
 
 if __name__ == "__main__":
     import uvicorn
