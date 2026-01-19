@@ -5,7 +5,7 @@ Adds a FastAPI example using routers, validation, and pytest tests.
 - Activate `.venv`
 - Run:
   ```bash
-  .\.venv\Scripts\python.exe -m pytest -q
+  python -m pytest -q
 
 
 ## Evidence
