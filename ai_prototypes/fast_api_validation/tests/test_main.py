@@ -41,3 +41,14 @@ def test_root_addition():
     r = client.get("/?a=2&b=3")
     assert r.status_code == 200
     assert r.json()["sum"] == 5
+
+def test_root_default_query_params():
+    """
+    Ensure default query params work when a and b are not provided
+    """
+    r = client.get("/")
+    assert r.status_code == 200
+    body = r.json()
+    assert "sum" in body
+    assert body["sum"] == 0
+
