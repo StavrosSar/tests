@@ -1,9 +1,15 @@
-## What does this PR do?
+## Summary
 Adds a FastAPI example using routers, validation, and pytest tests.
 
-## How was this tested?
-- [x] pytest
-- [x] FastAPI Swagger UI (/docs)
+## How-to-test
+- Activate `.venv`
+- Run:
+  ```bash
+  .\.venv\Scripts\python.exe -m pytest -q
+
 
 ## Evidence
 See /evidence/week01
+
+## Notes / Risks
+No known risks.
